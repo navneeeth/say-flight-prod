@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trips</title>
+  <link rel="stylesheet" href="plans.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="plans.js"></script>
+</head>
+<body onload="onBodyLoad()">
+
+  <section class="header">
+    <nav>
+    <a href = "index.html" class="logo"><img src="images/sf-logo.png"></a>
+    <h1 class="logo-title">Say Flight</h1>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="dashboard.html">DASHBOARD</a></li>
+            <li><a href="plans.html">PLAN A TRIP</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="trips.html">TRIPS</a></li>
+            <li><a href="index.html">LOG OUT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="trips-section">
+      <h2> Plan A Trip </h2>
+
+    </div>
+    <div id="input-text">
+      <p>It's simple. We only need the confirmation of your booking.<br>
+      How many people are you booking an insurance for?</p>
+      <br>
+      <label for="pc" id = "pc1">Choose the number (including yourself):</label><br>
+<select id="pc" name="pc" id = "pc">
+  <option value="0">1</option>
+  <option value="1">2</option>
+  <option value="2">3</option>
+  <option value="3">4</option>
+  <option value="4">5</option>
+  <option value="5">6</option>
+  <option value="6">7</option>
+  <option value="7">8</option>
+  <option value="8">9</option>
+</select>
+<br>
+<input type="submit" id="submit-btn" value="choose" onclick="onChooseClick()">
+    </div>
+  </section>
+  <section class="signup-form" id="signup-form">
+      <div class="container" id="user-details">
+        <h1></h1>
+        <div class = "parentcard">
+        <p>Passenger details</p>
+        <hr>
+        <label for="bookid1" id="lbookid1"><b>Enter Booking ID for Passenger 1:</b></label>
+        <input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid1" required>
+
+        <label for="cbookid1" id="lcbookid1"><b>Choose the plan for Passenger 1:</b></label>
+        <select id="cbookid1" name="pc">
+          <option value="1">Trip Cancellation</option>
+          <option value="2">Trip Interruption</option>
+          <option value="3">Medical Insurance</option>
+          <option value="4">Baggage Insurance</option>
+          <option value="5">Accidental Death Insurance</option>
+          <option value="6">All-inclusive Insurance</option>
+        </select>
+        <br>
+      </div>
+      <br>
+      <div class = "card" display="none">
+      <p>Passenger details</p>
+      <hr>
+      <label for="bookid2" id="lbookid2"><b>Enter Booking ID</b></label>
+      <input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid2" required>
+
+      <label for="cbookid2" id="lcbookid2"><b>Choose the plan for Passenger:</b></label>
+      <select id="cbookid2" name="pc">
+        <option value="1">Trip Cancellation</option>
+        <option value="2">Trip Interruption</option>
+        <option value="3">Medical Insurance</option>
+        <option value="4">Baggage Insurance</option>
+        <option value="5">Accidental Death Insurance</option>
+        <option value="6">All-inclusive Insurance</option>
+      </select>
+      <br>
+    </div>
+    <br>
+    <div class = "card" display="none">
+    <p>Passenger details</p>
+    <hr>
+    <label for="bookid3" id="lbookid3"><b>Enter Booking ID</b></label>
+    <input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid3" required>
+
+    <label for="cbookid3" id="lcbookid3"><b>Choose the plan for Passenger:</b></label>
+    <select id="cbookid3" name="pc">
+      <option value="1">Trip Cancellation</option>
+      <option value="2">Trip Interruption</option>
+      <option value="3">Medical Insurance</option>
+      <option value="4">Baggage Insurance</option>
+      <option value="5">Accidental Death Insurance</option>
+      <option value="6">All-inclusive Insurance</option>
+    </select>
+    <br>
+  </div>
+  <br>
+  <div class = "card" display="none">
+  <p>Passenger details</p>
+  <hr>
+  <label for="bookid4" id="lbookid4"><b>Enter Booking ID</b></label>
+  <input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid4" required>
+
+  <label for="cbookid4" id="lcbookid4"><b>Choose the plan for Passenger:</b></label>
+  <select id="cbookid4" name="pc">
+    <option value="1">Trip Cancellation</option>
+    <option value="2">Trip Interruption</option>
+    <option value="3">Medical Insurance</option>
+    <option value="4">Baggage Insurance</option>
+    <option value="5">Accidental Death Insurance</option>
+    <option value="6">All-inclusive Insurance</option>
+  </select>
+  <br>
+</div>
+<br>
+<div class = "card" display="none">
+<p>Passenger details</p>
+<hr>
+<label for="bookid5" id="lbookid5"><b>Enter Booking ID</b></label>
+<input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid5" required>
+
+<label for="cbookid5" id="lcbookid5"><b>Choose the plan for Passenger:</b></label>
+<select id="cbookid5" name="pc">
+  <option value="1">Trip Cancellation</option>
+  <option value="2">Trip Interruption</option>
+  <option value="3">Medical Insurance</option>
+  <option value="4">Baggage Insurance</option>
+  <option value="5">Accidental Death Insurance</option>
+  <option value="6">All-inclusive Insurance</option>
+</select>
+<br>
+</div>
+<br>
+<div class = "card" display="none">
+<p>Passenger details</p>
+<hr>
+<label for="bookid6" id="lbookid6"><b>Enter Booking ID</b></label>
+<input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid6" required>
+
+<label for="cbookid6" id="lcbookid6"><b>Choose the plan for Passenger:</b></label>
+<select id="cbookid6" name="pc">
+  <option value="1">Trip Cancellation</option>
+  <option value="2">Trip Interruption</option>
+  <option value="3">Medical Insurance</option>
+  <option value="4">Baggage Insurance</option>
+  <option value="5">Accidental Death Insurance</option>
+  <option value="6">All-inclusive Insurance</option>
+</select>
+<br>
+</div>
+<br>
+<div class = "card" display="none">
+<p>Passenger details</p>
+<hr>
+<label for="bookid7" id="lbookid7"><b>Enter Booking ID</b></label>
+<input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid7" required>
+
+<label for="cbookid7" id="lcbookid7"><b>Choose the plan for Passenger:</b></label>
+<select id="cbookid7" name="pc">
+  <option value="1">Trip Cancellation</option>
+  <option value="2">Trip Interruption</option>
+  <option value="3">Medical Insurance</option>
+  <option value="4">Baggage Insurance</option>
+  <option value="5">Accidental Death Insurance</option>
+  <option value="6">All-inclusive Insurance</option>
+</select>
+<br>
+</div>
+<br>
+<div class = "card" display="none">
+<p>Passenger details</p>
+<hr>
+<label for="bookid8" id="lbookid8"><b>Enter Booking ID</b></label>
+<input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid8" required>
+
+<label for="cbookid8" id="lcbookid8"><b>Choose the plan for Passenger:</b></label>
+<select id="cbookid8" name="pc">
+  <option value="1">Trip Cancellation</option>
+  <option value="2">Trip Interruption</option>
+  <option value="3">Medical Insurance</option>
+  <option value="4">Baggage Insurance</option>
+  <option value="5">Accidental Death Insurance</option>
+  <option value="6">All-inclusive Insurance</option>
+</select>
+<br>
+</div>
+<br>
+<div class = "card" visibility="hidden">
+<p>Passenger details</p>
+<hr>
+<label for="bookid9" id="lbookid9"><b>Enter Booking ID</b></label>
+<input type="number" placeholder="Enter Booking ID" name="bookid" id="bookid9" display="none" required>
+
+<label for="cbookid9" id="lcbookid9"><b>Choose the plan for Passenger:</b></label>
+<select id="cbookid9" name="pc">
+  <option value="1">Trip Cancellation</option>
+  <option value="2">Trip Interruption</option>
+  <option value="3">Medical Insurance</option>
+  <option value="4">Baggage Insurance</option>
+  <option value="5">Accidental Death Insurance</option>
+  <option value="6">All-inclusive Insurance</option>
+</select>
+<br>
+</div>
+        <p id='plan-status'></p>
+
+
+        <hr>
+
+
+        <input type="submit" value="Next" class="registerbtn" onclick="validateTrip()">
+      </div>
+  </section>
+  <section class="signup-form" id="second-step">
+      <div class="container" id="user-details">
+        <h1>Confirm Passenger Information:</h1>
+        <div class = "parentcard">
+        <p id="details1">Passenger details</p>
+        <hr>
+        <p><b>Booking ID:</b></p>
+        <br>
+        <p id ="rbookid1"></p>
+        <br>
+        <p><b>Source Airport:</b></p>
+        <br>
+        <p id ="rsourceairport1"></p>
+        <br>
+        <p><b>Destination Airport:</b></p>
+        <br>
+        <p id ="rdestairport1"></p>
+        <br>
+        <p><b>Meal Plan:</b></p>
+        <br>
+        <p id ="rmealplan1"></p>
+        <br>
+        <p><b>Cabin Type:</b></p>
+        <br>
+        <p id ="rcabin1"></p>
+        <br>
+        <p><b>Special Assistance (if any):</b></p>
+        <br>
+        <p id ="rsplass1"></p>
+        <br>
+        <p><b>Insurance Plan and Price</b></p>
+        <br>
+        <p id ="rinsplan1"></p>
+        <br>
+        <p><b>Flight Departure Time:</b></p>
+        <br>
+        <p id ="rfldept1"></p>
+        <br>
+        <p><b>Flight Departure Time Zone:</b></p>
+        <br>
+        <p id ="rfldeptz1"></p>
+        <br>
+        <p><b>Flight Arrival Time:</b></p>
+        <br>
+        <p id ="rfarrt1"></p>
+        <br>
+        <p><b>Flight Arrival Time Zone:</b></p>
+        <br>
+        <p id ="rfarrtz1"></p>
+        <br>
+        <p><b>Flight Carrier:</b></p>
+        <br>
+        <p id ="fcarrier1"></p>
+        <br>
+        <p><b>Passenger Name:</b></p>
+        <br>
+        <p id ="rname1"></p>
+        <br>
+        <p><b>Membership (if any):</b></p>
+        <br>
+        <p id ="rmembership1"></p>
+        <br>
+
+      </div>
+      <br>
+      <div class = "scard" display="none">
+        <p id="details2">Passenger details</p>
+        <hr>
+        <p><b>Booking ID:</b></p>
+        <br>
+        <p id ="rbookid2"></p>
+        <br>
+        <p><b>Source Airport:</b></p>
+        <br>
+        <p id ="rsourceairport2"></p>
+        <br>
+        <p><b>Destination Airport:</b></p>
+        <br>
+        <p id ="rdestairport2"></p>
+        <br>
+        <p><b>Meal Plan:</b></p>
+        <br>
+        <p id ="rmealplan2"></p>
+        <br>
+        <p><b>Cabin Type:</b></p>
+        <br>
+        <p id ="rcabin2"></p>
+        <br>
+        <p><b>Special Assistance (if any):</b></p>
+        <br>
+        <p id ="rsplass2"></p>
+        <br>
+        <p><b>Insurance Plan and Price</b></p>
+        <br>
+        <p id ="rinsplan2"></p>
+        <br>
+        <p><b>Flight Departure Time:</b></p>
+        <br>
+        <p id ="rfldept2"></p>
+        <br>
+        <p><b>Flight Departure Time Zone:</b></p>
+        <br>
+        <p id ="rfldeptz2"></p>
+        <br>
+        <p><b>Flight Arrival Time:</b></p>
+        <br>
+        <p id ="rfarrt2"></p>
+        <br>
+        <p><b>Flight Arrival Time Zone:</b></p>
+        <br>
+        <p id ="rfarrtz2"></p>
+        <br>
+        <p><b>Flight Carrier:</b></p>
+        <br>
+        <p id ="fcarrier2"></p>
+        <br>
+        <p><b>Passenger Name:</b></p>
+        <br>
+        <p id ="rname2"></p>
+        <br>
+        <p><b>Membership (if any):</b></p>
+        <br>
+        <p id ="rmembership2"></p>
+        <br>
+
+    </div>
+    <br>
+    <div class = "scard" display="none">
+      <p id="details3">Passenger details</p>
+      <hr>
+      <p><b>Booking ID:</b></p>
+      <br>
+      <p id ="rbookid3"></p>
+      <br>
+      <p><b>Source Airport:</b></p>
+      <br>
+      <p id ="rsourceairport3"></p>
+      <br>
+      <p><b>Destination Airport:</b></p>
+      <br>
+      <p id ="rdestairport3"></p>
+      <br>
+      <p><b>Meal Plan:</b></p>
+      <br>
+      <p id ="rmealplan3"></p>
+      <br>
+      <p><b>Cabin Type:</b></p>
+      <br>
+      <p id ="rcabin3"></p>
+      <br>
+      <p><b>Special Assistance (if any):</b></p>
+      <br>
+      <p id ="rsplass3"></p>
+      <br>
+      <p><b>Insurance Plan and Price</b></p>
+      <br>
+      <p id ="rinsplan3"></p>
+      <br>
+      <p><b>Flight Departure Time:</b></p>
+      <br>
+      <p id ="rfldept3"></p>
+      <br>
+      <p><b>Flight Departure Time Zone:</b></p>
+      <br>
+      <p id ="rfldeptz3"></p>
+      <br>
+      <p><b>Flight Arrival Time:</b></p>
+      <br>
+      <p id ="rfarrt3"></p>
+      <br>
+      <p><b>Flight Arrival Time Zone:</b></p>
+      <br>
+      <p id ="rfarrtz3"></p>
+      <br>
+      <p><b>Flight Carrier:</b></p>
+      <br>
+      <p id ="fcarrier3"></p>
+      <br>
+      <p><b>Passenger Name:</b></p>
+      <br>
+      <p id ="rname3"></p>
+      <br>
+      <p><b>Membership (if any):</b></p>
+      <br>
+      <p id ="rmembership3"></p>
+      <br>
+
+  </div>
+  <br>
+  <div class = "scard" display="none">
+    <p id="details4">Passenger details</p>
+    <hr>
+    <p><b>Booking ID:</b></p>
+    <br>
+    <p id ="rbookid4"></p>
+    <br>
+    <p><b>Source Airport:</b></p>
+    <br>
+    <p id ="rsourceairport4"></p>
+    <br>
+    <p><b>Destination Airport:</b></p>
+    <br>
+    <p id ="rdestairport4"></p>
+    <br>
+    <p><b>Meal Plan:</b></p>
+    <br>
+    <p id ="rmealplan4"></p>
+    <br>
+    <p><b>Cabin Type:</b></p>
+    <br>
+    <p id ="rcabin4"></p>
+    <br>
+    <p><b>Special Assistance (if any):</b></p>
+    <br>
+    <p id ="rsplass4"></p>
+    <br>
+    <p><b>Insurance Plan and Price</b></p>
+    <br>
+    <p id ="rinsplan4"></p>
+    <br>
+    <p><b>Flight Departure Time:</b></p>
+    <br>
+    <p id ="rfldept4"></p>
+    <br>
+    <p><b>Flight Departure Time Zone:</b></p>
+    <br>
+    <p id ="rfldeptz4"></p>
+    <br>
+    <p><b>Flight Arrival Time:</b></p>
+    <br>
+    <p id ="rfarrt4"></p>
+    <br>
+    <p><b>Flight Arrival Time Zone:</b></p>
+    <br>
+    <p id ="rfarrtz4"></p>
+    <br>
+    <p><b>Flight Carrier:</b></p>
+    <br>
+    <p id ="fcarrier4"></p>
+    <br>
+    <p><b>Passenger Name:</b></p>
+    <br>
+    <p id ="rname4"></p>
+    <br>
+    <p><b>Membership (if any):</b></p>
+    <br>
+    <p id ="rmembership4"></p>
+    <br>
+</div>
+<br>
+<div class = "scard" display="none">
+  <p id="details1">Passenger details</p>
+  <hr>
+  <p><b>Booking ID:</b></p>
+  <br>
+  <p id ="rbookid5"></p>
+  <br>
+  <p><b>Source Airport:</b></p>
+  <br>
+  <p id ="rsourceairport5"></p>
+  <br>
+  <p><b>Destination Airport:</b></p>
+  <br>
+  <p id ="rdestairport5"></p>
+  <br>
+  <p><b>Meal Plan:</b></p>
+  <br>
+  <p id ="rmealplan5"></p>
+  <br>
+  <p><b>Cabin Type:</b></p>
+  <br>
+  <p id ="rcabin5"></p>
+  <br>
+  <p><b>Special Assistance (if any):</b></p>
+  <br>
+  <p id ="rsplass5"></p>
+  <br>
+  <p><b>Insurance Plan and Price</b></p>
+  <br>
+  <p id ="rinsplan5"></p>
+  <br>
+  <p><b>Flight Departure Time:</b></p>
+  <br>
+  <p id ="rfldept5"></p>
+  <br>
+  <p><b>Flight Departure Time Zone:</b></p>
+  <br>
+  <p id ="rfldeptz5"></p>
+  <br>
+  <p><b>Flight Arrival Time:</b></p>
+  <br>
+  <p id ="rfarrt5"></p>
+  <br>
+  <p><b>Flight Arrival Time Zone:</b></p>
+  <br>
+  <p id ="rfarrtz5"></p>
+  <br>
+  <p><b>Flight Carrier:</b></p>
+  <br>
+  <p id ="fcarrier5"></p>
+  <br>
+  <p><b>Passenger Name:</b></p>
+  <br>
+  <p id ="rname5"></p>
+  <br>
+  <p><b>Membership (if any):</b></p>
+  <br>
+  <p id ="rmembership5"></p>
+  <br>
+</div>
+<br>
+<div class = "scard" display="none">
+  <p id="details6">Passenger details</p>
+  <hr>
+  <p><b>Booking ID:</b></p>
+  <br>
+  <p id ="rbookid6"></p>
+  <br>
+  <p><b>Source Airport:</b></p>
+  <br>
+  <p id ="rsourceairport6"></p>
+  <br>
+  <p><b>Destination Airport:</b></p>
+  <br>
+  <p id ="rdestairport6"></p>
+  <br>
+  <p><b>Meal Plan:</b></p>
+  <br>
+  <p id ="rmealplan6"></p>
+  <br>
+  <p><b>Cabin Type:</b></p>
+  <br>
+  <p id ="rcabin6"></p>
+  <br>
+  <p><b>Special Assistance (if any):</b></p>
+  <br>
+  <p id ="rsplass6"></p>
+  <br>
+  <p><b>Insurance Plan and Price</b></p>
+  <br>
+  <p id ="rinsplan6"></p>
+  <br>
+  <p><b>Flight Departure Time:</b></p>
+  <br>
+  <p id ="rfldept6"></p>
+  <br>
+  <p><b>Flight Departure Time Zone:</b></p>
+  <br>
+  <p id ="rfldeptz6"></p>
+  <br>
+  <p><b>Flight Arrival Time:</b></p>
+  <br>
+  <p id ="rfarrt6"></p>
+  <br>
+  <p><b>Flight Arrival Time Zone:</b></p>
+  <br>
+  <p id ="rfarrtz6"></p>
+  <br>
+  <p><b>Flight Carrier:</b></p>
+  <br>
+  <p id ="fcarrier6"></p>
+  <br>
+  <p><b>Passenger Name:</b></p>
+  <br>
+  <p id ="rname6"></p>
+  <br>
+  <p><b>Membership (if any):</b></p>
+  <br>
+  <p id ="rmembership6"></p>
+  <br>
+</div>
+<br>
+<div class = "scard" display="none">
+  <p id="details7">Passenger details</p>
+  <hr>
+  <p><b>Booking ID:</b></p>
+  <br>
+  <p id ="rbookid7"></p>
+  <br>
+  <p><b>Source Airport:</b></p>
+  <br>
+  <p id ="rsourceairport7"></p>
+  <br>
+  <p><b>Destination Airport:</b></p>
+  <br>
+  <p id ="rdestairport7"></p>
+  <br>
+  <p><b>Meal Plan:</b></p>
+  <br>
+  <p id ="rmealplan7"></p>
+  <br>
+  <p><b>Cabin Type:</b></p>
+  <br>
+  <p id ="rcabin7"></p>
+  <br>
+  <p><b>Special Assistance (if any):</b></p>
+  <br>
+  <p id ="rsplass7"></p>
+  <br>
+  <p><b>Insurance Plan and Price</b></p>
+  <br>
+  <p id ="rinsplan7"></p>
+  <br>
+  <p><b>Flight Departure Time:</b></p>
+  <br>
+  <p id ="rfldept7"></p>
+  <br>
+  <p><b>Flight Departure Time Zone:</b></p>
+  <br>
+  <p id ="rfldeptz7"></p>
+  <br>
+  <p><b>Flight Arrival Time:</b></p>
+  <br>
+  <p id ="rfarrt7"></p>
+  <br>
+  <p><b>Flight Arrival Time Zone:</b></p>
+  <br>
+  <p id ="rfarrtz7"></p>
+  <br>
+  <p><b>Flight Carrier:</b></p>
+  <br>
+  <p id ="fcarrier7"></p>
+  <br>
+  <p><b>Passenger Name:</b></p>
+  <br>
+  <p id ="rname7"></p>
+  <br>
+  <p><b>Membership (if any):</b></p>
+  <br>
+  <p id ="rmembership7"></p>
+  <br>
+</div>
+<br>
+<div class = "scard" display="none">
+  <p id="details1">Passenger details</p>
+  <hr>
+  <p><b>Booking ID:</b></p>
+  <br>
+  <p id ="rbookid8"></p>
+  <br>
+  <p><b>Source Airport:</b></p>
+  <br>
+  <p id ="rsourceairport8"></p>
+  <br>
+  <p><b>Destination Airport:</b></p>
+  <br>
+  <p id ="rdestairport8"></p>
+  <br>
+  <p><b>Meal Plan:</b></p>
+  <br>
+  <p id ="rmealplan8"></p>
+  <br>
+  <p><b>Cabin Type:</b></p>
+  <br>
+  <p id ="rcabin8"></p>
+  <br>
+  <p><b>Special Assistance (if any):</b></p>
+  <br>
+  <p id ="rsplass8"></p>
+  <br>
+  <p><b>Insurance Plan and Price</b></p>
+  <br>
+  <p id ="rinsplan8"></p>
+  <br>
+  <p><b>Flight Departure Time:</b></p>
+  <br>
+  <p id ="rfldept8"></p>
+  <br>
+  <p><b>Flight Departure Time Zone:</b></p>
+  <br>
+  <p id ="rfldeptz8"></p>
+  <br>
+  <p><b>Flight Arrival Time:</b></p>
+  <br>
+  <p id ="rfarrt8"></p>
+  <br>
+  <p><b>Flight Arrival Time Zone:</b></p>
+  <br>
+  <p id ="rfarrtz8"></p>
+  <br>
+  <p><b>Flight Carrier:</b></p>
+  <br>
+  <p id ="fcarrier8"></p>
+  <br>
+  <p><b>Passenger Name:</b></p>
+  <br>
+  <p id ="rname8"></p>
+  <br>
+  <p><b>Membership (if any):</b></p>
+  <br>
+  <p id ="rmembership8"></p>
+  <br>
+</div>
+<br>
+<div class = "scard" display="none">
+  <p id="details9">Passenger details</p>
+  <hr>
+  <p><b>Booking ID:</b></p>
+  <br>
+  <p id ="rbookid9"></p>
+  <br>
+  <p><b>Source Airport:</b></p>
+  <br>
+  <p id ="rsourceairport9"></p>
+  <br>
+  <p><b>Destination Airport:</b></p>
+  <br>
+  <p id ="rdestairport9"></p>
+  <br>
+  <p><b>Meal Plan:</b></p>
+  <br>
+  <p id ="rmealplan9"></p>
+  <br>
+  <p><b>Cabin Type:</b></p>
+  <br>
+  <p id ="rcabin9"></p>
+  <br>
+  <p><b>Special Assistance (if any):</b></p>
+  <br>
+  <p id ="rsplass9"></p>
+  <br>
+  <p><b>Insurance Plan and Price</b></p>
+  <br>
+  <p id ="rinsplan9"></p>
+  <br>
+  <p><b>Flight Departure Time:</b></p>
+  <br>
+  <p id ="rfldept9"></p>
+  <br>
+  <p><b>Flight Departure Time Zone:</b></p>
+  <br>
+  <p id ="rfldeptz9"></p>
+  <br>
+  <p><b>Flight Arrival Time:</b></p>
+  <br>
+  <p id ="rfarrt9"></p>
+  <br>
+  <p><b>Flight Arrival Time Zone:</b></p>
+  <br>
+  <p id ="rfarrtz9"></p>
+  <br>
+  <p><b>Flight Carrier:</b></p>
+  <br>
+  <p id ="fcarrier9"></p>
+  <br>
+  <p><b>Passenger Name:</b></p>
+  <br>
+  <p id ="rname9"></p>
+  <br>
+  <p><b>Membership (if any):</b></p>
+  <br>
+  <p id ="rmembership9"></p>
+  <br>
+
+</div>
+        <p id='plan-status'></p>
+
+
+        <hr>
+
+
+        <input type="submit" value="Next" class="registerbtn" onclick="beginPayment()">
+      </div>
+  </section>
+
+  <section class="signup-form" id="payment-form">
+      <div class="container" id="payment-details">
+        <h1>Invoice</h1>
+        <div class = "parentcard">
+        <p>Complete Purchase:</p>
+        <hr>
+        <p id="costs-and-plans"></p>
+      </div>
+      <br>
+        <p id='payment-status'></p>
+
+
+        <hr>
+
+
+        <input type="submit" value="Pay Now" class="registerbtn" onclick="processPayment()">
+      </div>
+  </section>
+</body>
+</html>

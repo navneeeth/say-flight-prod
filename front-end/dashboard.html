@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="dashboard.js"></script>
+</head>
+<body onbeforeunload="HandleBackFunctionality()" onload="onBodyLoad()">
+
+  <section class="header">
+    <nav>
+    <a href = "index.html" class="logo"><img src="images/sf-logo.png"></a>
+    <h1 class="logo-title">Say Flight</h1>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="dashboard.html">DASHBOARD</a></li>
+            <li><a href="plans.html">PLAN A TRIP</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="trips.html">TRIPS</a></li>
+            <li><a href="index.html">LOG OUT</a></li>
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+
+    <h1 id="top-part">Welcome to your Dashboard!</h1>
+        <p id="username"></p>
+        <p>Click <a href="plans.html" id ="link-for-dashboard">here</a> to begin or choose from our insurance plans below:</p>
+        <p id='paySuccess'> You have successfully completed your payment! Your plan details will be mailed to your registered email.</p>
+        </div>
+  </section>
+  <section class="course" id="plans">
+  <h1>Our Insurance Plans</h1>
+      <p> Choose your insurance plan from our range of coverage:</p>
+  <div class = "course-row">
+      <div class="course-col">
+      <h3> Trip Cancellation </h3>
+          <p> Trip Cancellation entails returns on trip cancellation due to unavoidable circumstances.</p>
+      </div>
+      <div class="course-col">
+      <h3> Trip Interruption </h3>
+          <p>Trip Interruption entails returns on non-refundable trips that are cancelled/changed due to unavoidable circumstances.</p>
+      </div>
+      <div class="course-col">
+      <h3> Medical Insurance </h3>
+          <p>Medical Insurance offers complete medical coverage throughout the duration of the trip.</p>
+      </div>
+      <div class="course-col">
+      <h3> Baggage Insurance </h3>
+          <p> Baggage Insurance offers returns on loss/damages/misplacement of baggage by the airlines.</p>
+      </div>
+      <div class="course-col">
+      <h3> Accidental Death Insurance </h3>
+          <p>Accidental Death Insurance offers returns on unforeseen incidents that are caused on the airline.</p>
+      </div>
+      <div class="course-col">
+      <h3> All-inclusive Insurance </h3>
+          <p> Our all-inclusive plan that entails coverage for all schemes at a discounted price.</p>
+      </div>
+      </div>
+
+  </section>
+</body>
+</html>

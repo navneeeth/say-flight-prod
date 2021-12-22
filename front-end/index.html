@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Say Flight
+        </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <section class="header">
+        <nav>
+        <a href = "index.html" class="logo"><img src="images/sf-logo.png"></a>
+        <h1 class="logo-title">Say Flight</h1>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#plans">PLANS</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="loginPage.html">LOGIN</a></li>
+                <li><a href="signUp.html">SIGN UP</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+    <div class="text-box">
+
+    <h1 id="top-part">Have A Safe Flight!</h1>
+        <p>The words that we insure and ensure! <br/> Trust our travel insurance
+        plans for your next flight! </p>
+        <a href="loginPage.html" class="hero-btn">Get Started</a>
+        </div>
+        </section>
+
+        <section class="course" id="plans">
+        <h1>Our Insurance Plans</h1>
+            <p> Choose your insurance plan from our range of coverage:</p>
+        <div class = "course-row">
+            <div class="course-col">
+            <h3> Trip Cancellation </h3>
+                <p> Trip Cancellation entails returns on trip cancellation due to unavoidable circumstances.</p>
+            </div>
+            <div class="course-col">
+            <h3> Trip Interruption </h3>
+                <p>Trip Interruption entails returns on non-refundable trips that are cancelled/changed due to unavoidable circumstances.</p>
+            </div>
+            <div class="course-col">
+            <h3> Medical Insurance </h3>
+                <p>Medical Insurance offers complete medical coverage throughout the duration of the trip.</p>
+            </div>
+            <div class="course-col">
+            <h3> Baggage Insurance </h3>
+                <p> Baggage Insurance offers returns on loss/damages/misplacement of baggage by the airlines.</p>
+            </div>
+            <div class="course-col">
+            <h3> Accidental Death Insurance </h3>
+                <p>Accidental Death Insurance offers returns on unforeseen incidents that are caused on the airline.</p>
+            </div>
+            <div class="course-col">
+            <h3> All-inclusive Insurance </h3>
+                <p> Our all-inclusive plan that entails coverage for all schemes at a discounted price.</p>
+            </div>
+            </div>
+
+        </section>
+
+
+
+
+
+        <section class="facilities">
+        <h1>Our Service</h1>
+            <p>Our services are state-of-the-art and offer the latest features.</p>
+            <div class="row">
+
+            <div class="facilities-col">
+                <img src="images/f-1.jpeg">
+                <h3> Reliable. </h3>
+                <p>We uphold reliable business values through rapid plan finalization and reimbursement. </p>
+
+
+                </div>
+                 <div class="facilities-col">
+                <img src="images/f-2.jpeg">
+                <h3> 3-Step Sign-Up. </h3>
+                <p> Our service offers simple and hassle-free registration. No signatures or questions asked.</p>
+
+
+                </div>
+                 <div class="facilities-col">
+                <img src="images/f-3.jpeg">
+                <h3> 1 For All. All For 1. </h3>
+                <p> Just one registrant's details are needed in order to book insurance for all passengers. </p>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="get-started">
+          <h1> Get Started!</h1>
+          <p>Click <a href="loginPage.html" class="get-started-link">here</a> to log-in and insure your next trip! </p>
+        </section>
+
+
+        <section class="cta" id="contact">
+        <h1>Reach out to us! <br> We'd love to hear from you!</h1>
+        <a href = "" class="hero-btn">CONTACT US</a>
+
+        </section>
+
+
+        <section class="footer" id="about">
+        <h4>About Us</h4>
+            <p>We are a bunch of engineering students who have designed this page for our project submission.</p>
+            <div class="icons">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-github"></i>
+                <i class="fa fa-linkedin"></i>
+
+            </div>
+            <p> Made with <i class="fa fa-heart-o"></i> by Navneeth and Anshika.</p>
+        </section>
+
+
+
+        <script>
+
+        var navLinks = document.getElementById('navLinks');
+        function showMenu() {
+            navLinks.style.right = "0";
+
+        }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="loginPage.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="loginPage.js"></script>
+</head>
+<body onload="onBodyLoad()">
+  <section class="header">
+    <nav>
+    <a href = "index.html" class="logo"><img src="images/sf-logo.png"></a>
+    <h1 class="logo-title">Say Flight</h1>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#plans">PLANS</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="loginPage.html">LOGIN</a></li>
+            <li><a href="signUp.html">SIGN UP</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="login-section">
+      <h2> Login </h2>
+      <input type="text" placeholder="Enter email" id="email"></input>
+      <br>
+      <input type="password" placeholder="Enter password" id="pwd"></input>
+      <br>
+      <button type="submit" class="submit-btn" onclick="validateLogin()">LOGIN</button>
+      <br>
+      <p id="signup-text">Or, click <a class="signup-link" href='signUp.html'>here</a> to sign-up!</p>
+      <p id="login-status"></p>
+    </div>
+
+  </section>
+</body>
+</html>
